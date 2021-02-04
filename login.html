@@ -1,0 +1,125 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+  body{
+    background: var(--theme-red);
+  }
+    
+
+    .login-container {
+
+      max-width: 85%;
+    background: white;
+    box-shadow: 0 2px 3px 0 rgb(247 240 240 / 10%);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    }
+    .login-form{
+        padding:0.1rem 0.5rem 4rem 0.5rem;
+    }
+    .form-group input{
+        border: none;
+    border-bottom: 2px solid rgb(115, 114, 116);
+    border-radius: 0;
+    font-size: 0.8rem;
+    }
+    .form-group label{
+        margin-bottom: -2px;
+    }
+    
+    .form-header{
+        font-weight: bold;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+        font-family: ui-rounded;
+    }
+    .logo{
+        
+        max-width: 99%;
+    }
+    @media (max-width: 576px){
+        
+  .login-container{
+      width:90%;
+  }
+  
+}
+
+</style>
+
+<body>
+    <div class="container-fluid">
+        <div class="login-container centered-fixed">
+            <div class="mb-3 text-center px-2">
+                <img src="img/logo.png" alt="" class="logo">
+                <div class="form-header text-center">
+                    Login to Health Kiosk
+                </div>
+            </div>
+            <hr>
+            <div class="w-100">
+                
+                <div class="login-form">
+                    <form action="date-wise-data.html" class="needs-validation" novalidate>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Email address</label>
+
+                          <input type="email" class="form-control" id="employeeId" placeholder="Enter employee ID" required>
+                          
+                          <div class="invalid-feedback">
+                            Enter a valid Employee ID.
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Password</label>
+
+                          <input type="password" class="form-control" id="password" placeholder="Enter password" required>
+
+                        </div>
+                        
+                        <div class="form-group">
+                            <button type="submit" class="btn bg-theme float-right">Log In</button>
+                        </div>
+                      </form>
+                    
+                      
+                      
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        // Example starter JavaScript for disabling form submissions if there are invalid fields
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName('needs-validation');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
+</body>
+
+</html>
